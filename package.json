@@ -1,0 +1,21 @@
+{
+  "dependencies": {},
+  "name": "voerka-cloud-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "del": "del-cli --help",
+    "build": "turbo run build",
+    "deploy": "turbo run deploy",
+    "publish": "turbo run publish",
+    "server-template:deploy": "del-cli deploy/server-template --force && pnpm --filter server-template deploy deploy/server-template && cd deploy/server-template && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "turbo": "^1.13.2"
+  }
+}
