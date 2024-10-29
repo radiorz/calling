@@ -2,6 +2,6 @@ version: "3"
 services:
   peer-server:
     image: peerjs/peerjs-server:latest
-    container_name: freeswitch
+    container_name: peer-server
     ports:
       - "9000:9000"
