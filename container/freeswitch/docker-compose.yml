@@ -1,0 +1,21 @@
+version: '3'
+services:
+  freeswitch:
+    image: freeswitch/freeswitch:latest
+    container_name: freeswitch
+    environment:
+      - FREESWITCH_PASSWORD=your_password
+    ports:
+      - "5060:5060/udp"
+      - "5080:5080/tcp"
+      - "8021:8021/tcp"
+      - "7443:7443/tcp"
+      - "64535-65535:64535-65535/udp"
+    volumes:
+      - ./conf:/usr/local/freeswitch/conf
+#     networks:
+#       - fsnet
+
+# networks:
+#   fsnet:
+#     driver: bridge
