@@ -8,6 +8,13 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
         <input type="text" id="remote-id" placeholder="输入对方的ID">
         <button id="start-call">开始通话</button>
         <button id="end-call">结束通话</button>
+        <button id="toggle-video">关闭视频</button>
+        <button id="toggle-audio">关闭音频</button>
+        <div class="volume-control">
+            <label for="volume-control">音量控制:</label>
+            <input type="range" id="volume-control" min="0" max="100" value="50">
+            <span id="volume-value">1</span>
+        </div>
     </div>
 
     <div class="video-container">
