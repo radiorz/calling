@@ -15,6 +15,17 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
             <input type="range" id="volume-control" min="0" max="100" value="50">
             <span id="volume-value">1</span>
         </div>
+         <div class="resolution-control">
+            <label for="resolution-select">视频质量:</label>
+            <select id="resolution-select">
+                <option value="qvga">QVGA (320x240)</option>
+                <option value="vga">VGA (640x480)</option>
+                <option value="hd" selected>HD (1280x720)</option>
+                <option value="fullHd">Full HD (1920x1080)</option>
+                <option value="4k">4K (3840x2160)</option>
+            </select>
+            <span id="current-resolution"></span>
+        </div>
     </div>
 
     <div class="video-container">
